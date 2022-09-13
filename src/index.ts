@@ -1,6 +1,7 @@
 /** root ts file */
 import _ from 'lodash';
-import sayHi, {sayHiToSomeone} from './another';
+import sayHi, { sayHiToSomeone } from './another';
+import { regist } from './regist';
 
 const array = [1, 2, 3];
 _.fill(array, 'a');

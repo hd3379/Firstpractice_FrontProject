@@ -15,14 +15,13 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="asset/css/styles.css" rel="stylesheet" />
 
-        <script type="text/javascript" src="asset/js/login.js"></script>
     </head>
     <body>
         <!-- Navigation-->
         <nav class="navbar navbar-light bg-dark static-top">
             <div class="container">
                 <!-- <a class="navbar-brand" href="#!">Start Bootstrap</a> -->
-                <a class="navbar-brand" href="index.html"></a>
+                <a class="navbar-brand" href="main_page.html"></a>
                 <div style="display: flex; align-items: center;">
                   <div>
                     <!-- <a class="btn btn-xs btn-default" href="#signup">Sign Up</a>  -->
@@ -30,38 +29,9 @@
                     <a class="btn btn-xs nav-item">오늘의 뉴스</a>
                   </div>
                   <div style="margin-left: 1rem;">
-                    <div class="btn-group">
-                        <div>
-                          <button type="button"
-                          onClick="location.href='register.html'" class="dropbtn btn-primary m-3">
-                              Signin
-
-                          <button type="button"
-                              onclick="click_login()" class="dropbtn btn-primary m-3">
-                              Login
-                          </button>
-                        </div>
-                        <ul
-                            id="myDropdown"
-                            class="dropdown-content bg-black text-white">
-                            <li style="width: 250px;">
-                                <form>
-                                    <div class="" style="width: 150px;">
-                                        <label class="control-label">아 이 디</label> <input
-                                            type="text" class="form-control" placeholder="" name="id" id = "id">
-
-                                    </div>
-                                    <div class="" style="width: 150px;">
-                                        <label class="control-label">비밀번호</label> <input
-                                            type="password" class="form-control" placeholder=""
-                                            name="pw" id ="password"> 
-                                    </div>
-                                    <button type="submit" class="btn text-white btn-sm" onclick="login()">
-                                        로 그 인</button>
-                                </form>
-                            </li>
-                        </ul>
-                    </div>
+                    <!-- <a class="btn btn-xs btn-default" href="#signup">Sign Up</a>  -->
+                    
+                    <a class="btn btn-xs btn-custom" href="index.html">Logout</a>
                   </div>
                 </div>
             </div>
@@ -85,15 +55,38 @@
         <div class="search-main">
           <div class="row col-md-12 justify-content-center">
             <div class="form-group col-md-2">
-              <h2>회원가입 및 로그인 후 이용 해주세요</h2>
+              <button type="submit" class="btn text-white btn-sm" onClick="location.href='search_deal.html'">
+                <h4>동별 실거래가 조회</h4></button>
+            </div>
+            <div class="form-group col-md-2">
+              <button type="submit" class="btn text-white btn-sm" onClick="location.href='search_deal.html'">
+                <h4>아파트별 실거래가 조회</h4></button>
             </div>
           </div>
         </div>
 
-      
+        
+
+
+        <!-- Icons Grid-->
+        <section class="features-icons bg-light text-center">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-4">
+                      <img src="asset/img/img1.jpg" style="width: 100%;">
+                        <!-- <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+                            <div class="features-icons-icon d-flex"><i class="bi-window m-auto text-primary"></i></div>
+                            <h3>Fully Responsive</h3>
+                            <p class="lead mb-0">This theme will look great on any device, no matter the size!</p>
+                        </div> -->
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
         <!-- Footer-->
         <footer class="footer-copy">
-            <p class="text-muted small" style="display: flex; justify-content: center;">&copy; Copyright by SSAFY. All rights reserved.</p>
+          <p class="text-muted small" style="display: flex; justify-content: center;">&copy; Copyright by SSAFY. All rights reserved.</p>
         </footer>
         <div class="down"></div>
         <!-- Bootstrap core JS-->

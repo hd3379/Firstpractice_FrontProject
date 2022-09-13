@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="zxx">
+
+<head>
+  <meta charset="utf-8">
+  <title>HappyHouse |  회원 정보</title>
+  <meta name="description"
+    content="The Project a Bootstrap-based, Responsive HTML5 Template">
+  <meta name="author" content="author">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="images/favicon.ico">
+  <script type="text/javascript" src="asset/js/login.js"></script>
+  <link rel="stylesheet" href="asset/css/styles.css" />
+</head>
+
+<!-- top 갈아낄것-->
+<nav class="navbar navbar-light bg-dark static-top">
+  <div class="container">
+      <!-- <a class="navbar-brand" href="#!">Start Bootstrap</a> -->
+      <a class="navbar-brand" href="registerCheck.html"></a>
+      <div style="display: flex; align-items: center;">
+        <div>
+        </div>
+        <div style="margin-left: 1rem;">
+        </div>
+      </div>
+
+      <div class="container">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><i class="fa fa-home pr-2"></i><a
+            class="link-dark text-white" href="main_page.html">Home</a></li>
+          <li class="breadcrumb-item active">회원 정보</li>
+        </ol>
+      </div>
+  </div>
+</nav>
+<!-- top 갈아낄것-->
+
+
+	<!-- breadcrumb end -->
+
+	<!-- main-container start -->
+	<!-- ================ -->
+	<div class="register-page bg-secondary col text-black-50">
+    <div class="p-5"></div>
+    <div class="container bg-light rounded-3 p-5">
+      <h1>회원 정보 확인</h1>
+      <div class="form form-subscribe">
+        <form name="register-form" class="row justify-content-md-center">
+          <div class = "row p-2">  
+            <div class = "col-1"></div>
+            <div class = "col-2">
+              아이디 <text class ="text-danger">*</text>
+            </div>
+            <div class = "col">
+              <text id = "show_id"></text>
+            </div>
+          </div>  
+          <div class = "row p-2">  
+            <div class = "col-1"></div>
+            <div class = "col-2">
+              비밀번호 <text class ="text-danger">*</text>
+            </div>
+            <div class = "col" >
+              <text id = "show_password"></text>
+            </div>
+          </div>
+          <div class = "row p-2">  
+            <div class = "col-1"></div>
+            <div class = "col-2">
+              이름 <text class ="text-danger">*</text>
+            </div>
+            <div class = "col">
+              <text id = "show_name"></text>
+            </div>
+          </div>
+          <div class = "row p-2">  
+            <div class = "col-1"></div>
+            <div class = "col-2">
+              주소 <text class ="text-danger">*</text>
+            </div>
+            <div class = "col">
+              <text id = "show_email"></text>
+            </div>
+          </div>
+          <div class = "row p-2">  
+            <div class = "col-1"></div>
+            <div class = "col-2">
+              전화번호 <text class ="text-danger">*</text>
+            </div>
+            <div class = "col">
+              <text id = "show_phone"></text>
+            </div>
+          </div> 
+          <script>
+            show_regist_info();
+          </script>
+          <button class="bg-info m-3" onClick="location.href='index.html'" type="button" style="width: 100px;">확인</button>
+          <button class="bg-info m-3" onClick="location.href='register.html'"  type="button" style="width: 100px;">수정</button>
+        </form>
+      </div>
+    </div>
+    <div class="p-5"></div>
+  </div>
+	<!-- main-container end -->
+
+
+  <!--footer 갈아낄것-->
+  <footer class="footer-copy">
+    <p class="text-muted small" style="display: flex; justify-content: center;">&copy; Copyright by SSAFY. All rights reserved.</p>
+  </footer>
+
+  <!--footer 갈아낄것-->
+
+
+</body>
+</html>
