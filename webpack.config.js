@@ -2,19 +2,31 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
 
 module.exports = {
-  mode: "development",
-  entry: "./src/index.ts",
+  mode: "development", //개발자모드
+  entry: {
+    index: "./src/ts/index.ts", //index에 필요한 ts파일
+    login: "./src/ts/login.ts",
+    regist: "./src/ts/regist.ts",
+  },
   devtool: "inline-source-map",
   devServer: {
     static: "./dist",
   },
   module: {
-    rules: [
+    rules: [ //로더 등록
       {
         test: /\.tsx?$/,
         use: "ts-loader",
         exclude: /node_modules/,
       },
+      {
+        test: /\.html$/,
+        loader: "html-loader",
+      },
+      {
+        test:/\.css$/,
+        use:['style-loader','css-loader'],
+    },
     ],
   },
   resolve: {
@@ -26,14 +38,34 @@ module.exports = {
     poll: 1000,
     ignored: /node_modules/,
   },
-  output: {
-    filename: "bundle.js",
+  output: { //출력 디렉터리
+    filename: "[name].js",
     path: path.resolve(__dirname, "dist"),
     clean: true,
   },
-  plugins: [
+  plugins: [ //플러그인 등록 (이런저런 파일 dist에 등록)
     new HtmlWebpackPlugin({
-      template: "./src/index.html",
+      filename: "index.html",
+      template: "./src/html/index.html",
+      chunk : ['index']
     }),
+    new HtmlWebpackPlugin({
+      filename: "main_page.html",
+      template: "./src/html/main_page.html",
+    }),
+    new HtmlWebpackPlugin({
+      filename: "registerCheck.html",
+      template: "./src/html/registerCheck.html",
+    }),
+    new HtmlWebpackPlugin({
+      filename: "register.html",
+      template: "./src/html/register.html",
+      chunk : ['index']
+    }),
+    new HtmlWebpackPlugin({
+      filename: "search_deal.html",
+      template: "./src/html/search_deal.html",
+    }),
+    
   ],
 };

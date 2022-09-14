@@ -1,10 +1,10 @@
 function regist() {
     // 문서에서 id 로 input data 가져오기
-    const id = document.getElementById("id").value;
-    const password = document.getElementById("password").value;
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const phone = document.getElementById("phone").value;
+    const id = (<HTMLInputElement>document.getElementById("id")).value;
+    const password = (<HTMLInputElement>document.getElementById("password")).value;
+    const name = (<HTMLInputElement>document.getElementById("name")).value;
+    const email = (<HTMLInputElement>document.getElementById("email")).value;
+    const phone = (<HTMLInputElement>document.getElementById("phone")).value;
   
     // 입력값 검증
     if (!id || !password || !name || !email || !phone) {
