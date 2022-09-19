@@ -3,11 +3,7 @@ const path = require("path");
 
 module.exports = {
   mode: "development", //개발자모드
-  entry: {
-    index: "./src/ts/index.ts", //index에 필요한 ts파일
-    login: "./src/ts/login.ts",
-    regist: "./src/ts/regist.ts",
-  },
+  entry: [ "./src/ts/index.ts", "./src/css/styles.css"],
   devtool: "inline-source-map",
   devServer: {
     static: "./dist",
@@ -20,17 +16,20 @@ module.exports = {
         exclude: /node_modules/,
       },
       {
-        test: /\.html$/,
-        loader: "html-loader",
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
       },
       {
-        test:/\.css$/,
-        use:['style-loader','css-loader'],
-    },
+        test: /\.(png|jpe?g|gif)$/i,
+        loader: 'file-loader',
+        options: {
+          name : 'assets/img/[contenthash].[ext]'
+        }
+      },
     ],
   },
   resolve: {
-    extensions: [".tsx", ".ts", ".js"],
+    extensions: [".tsx", ".ts", ".js", '.css'],
   },
   watch: true,
   watchOptions: {

@@ -6,42 +6,39 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>Help Me Homes</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="asset/favicon.ico" />
         <!-- Bootstrap icons-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" type="text/css" />
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
-
-
     </head>
     <body>
         <!-- Navigation-->
         <nav class="navbar navbar-light bg-dark static-top">
-            <div class="container">
+            <form name = "navbar-form" class="container">
                 <!-- <a class="navbar-brand" href="#!">Start Bootstrap</a> -->
                 <a class="navbar-brand" href="index.html"></a>
                 <div style="display: flex; align-items: center;">
-                  <div>
-                    <!-- <a class="btn btn-xs btn-default" href="#signup">Sign Up</a>  -->
-                    <a class="btn btn-xs nav-item">공지사항</a> 
-                    <a class="btn btn-xs nav-item">오늘의 뉴스</a>
-                  </div>
-                  <div style="margin-left: 1rem;">
-                    <div class="btn-group">
-                        <div>
-                          <button type="button"
-                          onClick="location.href='register.html' " class="dropbtn btn-primary m-3">
-                              Signin 
-
-                          <button type="button"
-                              onclick="click_login()" class="dropbtn btn-primary m-3">
-                              Login
-                          </button>
-                        </div>
-                        <ul
-                            id="myDropdown"
-                            class="dropdown-content bg-black text-white">
-                            <li style="width: 250px;">
-                                <form>
+                    <div>
+                        <!-- <a class="btn btn-xs btn-default" href="#signup">Sign Up</a>  -->
+                        <a class="btn btn-xs nav-item">공지사항</a> 
+                        <a class="btn btn-xs nav-item">오늘의 뉴스</a>
+                    </div>
+                    <div style="margin-left: 1rem;">
+                        <div class="btn-group">
+                            <div>
+                                <button type="button"
+                                onClick="location.href='register.html'" class="dropbtn btn-primary m-3">
+                                    Signin </button>
+                                <button type="button"
+                                    id = "login-click" class="dropbtn btn-primary m-3">
+                                    Login </button>
+                            </div>
+                            <ul
+                                id="myDropdown"
+                                class="dropdown-content bg-black text-white">
+                                <li style="width: 250px;">
                                     <div class="" style="width: 150px;">
                                         <label class="control-label">아 이 디</label> <input
                                             type="text" class="form-control" placeholder="" name="id" id = "id">
@@ -52,15 +49,14 @@
                                             type="password" class="form-control" placeholder=""
                                             name="pw" id ="password"> 
                                     </div>
-                                    <button type="submit" class="btn text-white btn-sm" onclick="login()">
-                                        로 그 인</button>
-                                </form>
-                            </li>
-                        </ul>
+                                    <button type="submit" class="btn text-white btn-sm" id = "login">
+                                        로 그 인 </button>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                  </div>
                 </div>
-            </div>
+            </form>
         </nav>
         <!-- Masthead-->
         <header class="masthead">
@@ -92,12 +88,5 @@
             <p class="text-muted small" style="display: flex; justify-content: center;">&copy; Copyright by SSAFY. All rights reserved.</p>
         </footer>
         <div class="down"></div>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <!-- * *                               SB Forms JS                               * *-->
-        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
     </body>
 </html>

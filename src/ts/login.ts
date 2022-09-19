@@ -1,14 +1,5 @@
 
-  
-function show_regist_info() {
-    const user = JSON.parse(<string>localStorage.getItem("user"));
 
-    (<HTMLElement>document.getElementById("show_id")).innerHTML = user.id;
-    (<HTMLElement>document.getElementById("show_password")).innerHTML = user.password;
-    (<HTMLElement>document.getElementById("show_name")).innerHTML = user.name;
-    (<HTMLElement>document.getElementById("show_phone")).innerHTML = user.phone;
-    (<HTMLElement>document.getElementById("show_email")).innerHTML = user.email;
-}
 function login() {
     // 문서에서 id로 input data 가져오기
     const id = (<HTMLInputElement>document.getElementById("id")).value;
@@ -34,7 +25,8 @@ function login() {
 function click_login() {
     (<HTMLElement>document.getElementById("myDropdown")).classList.toggle("show");
 }
-  
+
+
   // Close the dropdown if the user clicks outside of it
 window.onclick = function(event) {
     if (!(<HTMLTextAreaElement>event.target).matches('.dropbtn')) {
@@ -43,9 +35,23 @@ window.onclick = function(event) {
         let i;
         for (i = 0; i < dropdowns.length; i++) {
         const openDropdown = dropdowns[i];
-        /*if (openDropdown.classList.contains('show')) {
+        if (openDropdown.classList.contains('show')) {
             openDropdown.classList.remove('show');
-        }*/
+        }
         }
     }
 }
+
+document.getElementById("navbar-form")?.addEventListener("click", function (e) {
+    const target= e.target as HTMLInputElement;
+    if (target.id === "login-click") {
+      click_login();
+    }
+    else if (target.id === "login") {
+      login();
+    }
+  });
+
+export {
+    login , click_login
+};
